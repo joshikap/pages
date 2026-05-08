@@ -129,13 +129,13 @@ class GameLevelOcean3 {
         pixels: { height: 1200, width: 857 }
     };
 
-    // Player (FIXED)
+    // Player 
     const sprite_data_octopus = {
         id: 'Octopus',
         src: path + "/images/projects/ocean-adventure/player/octopus.png",
 
         SCALE_FACTOR: 7,
-        STEP_FACTOR: 400, // CRITICAL FIX
+        STEP_FACTOR: 400, 
         ANIMATION_RATE: 50,
 
         INIT_POSITION: { x: 100, y: height - (height/5) },
@@ -144,7 +144,7 @@ class GameLevelOcean3 {
 
         orientation: { rows: 3, columns: 2 },
         down: { row: 0, start: 0, columns: 2 },
-        left: { row: 1, start: 0, columns: 2 },
+        left: { row: 1, start: 0, columns: 2 },//mirror 
         right: { row: 1, start: 0, columns: 2 },
         up: { row: 2, start: 0, columns: 2 },
 
@@ -153,7 +153,7 @@ class GameLevelOcean3 {
         keypress: { up: 87, left: 65, down: 83, right: 68 }
     };
 
-    // Goal
+    // gold fish 
     const sprite_data_goldfish = {
         id: 'Goldfish',
         greeting: "You escaped!",
@@ -352,7 +352,7 @@ class GameLevelOcean3 {
       { class: Shark, data: sprite_data_shark },
       { class: Npc, data: sprite_data_goldfish },
 
-      // Add coins to the game
+     
       ...coinPositions.map((pos, index) => ({
         class: Npc,
         data: {
